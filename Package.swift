@@ -41,7 +41,7 @@ let package = Package(
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.89.0"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"), // Add Fluent package
-        .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"), // Add SQLite driver for Fluent 
+        .package(url: "https://github.com/vapor/fluent-postgress-driver.git", from: "2.0.0"), // Add postgress driver for Fluent
         
     ],
     targets: [
@@ -50,7 +50,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "Fluent", package: "fluent"), // Add Fluent dependency
-                .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"), // Add SQLite driver dependency
+                .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"), // Add Postgres driver dependency
             ]
         ),
         .testTarget(name: "AppTests", dependencies: [
